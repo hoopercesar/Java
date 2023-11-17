@@ -2,26 +2,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Clientes cliente = muestraCliente();
-        System.out.println(cliente);
+        Clientes cliente1 = muestraCliente();
+        cliente1.mostrarDatos();
 
     }
 
     private static Clientes muestraCliente() {
         Scanner teclado = new Scanner(System.in);
-        Clientes cliente = new Clientes();
+        Clientes cliente = new Clientes("pepe", "soto", 45);
 
         System.out.println("nombre");
-        cliente.nombre = teclado.nextLine();
+        //cliente.setNombre(teclado.nextLine());
 
         System.out.println("Apellido");
-        cliente.apellido = teclado.nextLine();
+        //cliente.setApellido(teclado.nextLine());
 
         System.out.println("edad");
-        cliente.edad = teclado.nextInt();
+        //cliente.setEdad(teclado.nextInt());
 
-        // System.out.println(cliente.nombre + ' ' + cliente.apellido + ' ' + cliente.edad);
-
+        //cliente.mostrarDatos();
 
         return cliente;
 
