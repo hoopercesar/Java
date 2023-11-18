@@ -24,8 +24,11 @@ public class Cuenta {
         this.cantidad = cantidad;
     }
 
-    public void mostrar(){
-        System.out.println("");
-    }
 
+    public String mostrar() {
+        return "Cuenta{" +
+                "titular='" + titular + '\'' +
+                ", cantidad=" + cantidad +
+                '}';
+    }
 }
