@@ -28,9 +28,7 @@ public class Cuenta {
     public String mostrar() {
         return "Cuenta{" +
                 "titular='" + titular + '\'' +
-                ", cantidad=" + cantidad +
+                ", cantidad $" + cantidad +
                 '}';
     }
-
-
 }
