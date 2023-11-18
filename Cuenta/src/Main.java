@@ -8,13 +8,17 @@ public class Main {
 
     public static float retiraDinero(float cantidad, float saldo){
         if (cantidad > saldo) {
-            return;
+            return saldo;
         }
-        
         saldo -= cantidad;
 
         return saldo;
+    }
 
+    public static float depositaDinero(float cantidadAIngresar, float saldo){
+        saldo += cantidadAIngresar;
+
+        return saldo;
     }
 
     public static Cuenta ingresaCliente() {
@@ -29,10 +33,11 @@ public class Main {
 
         System.out.println("Ingresa cantidad a retirar");
         float cantidadRetirar = Float.parseFloat(teclado.nextLine());
-        if (cantidadRetirar > cuenta.getCantidad()) {
-            return;
-        }
+        cuenta.setCantidad(retiraDinero(cantidadRetirar, cuenta.getCantidad()));
 
+        System.out.println("Cantidad a Depositar");
+        float cantidadADepositar = Float.parseFloat(teclado.nextLine());
+        cuenta.setCantidad(depositaDinero(cantidadADepositar, cuenta.getCantidad()));
 
         return cuenta;
     }
