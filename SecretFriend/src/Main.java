@@ -1,8 +1,18 @@
 import java.util.*;
 
 public class Main {
+
+
     public static void main(String[] args) {
         String amigo = buscaAmigo();
+        int a = 3;
+        Integer b = 8;
+        String[] ciudades = new String[10];
+        Object algo = new Object[10];
+
+        System.out.println(a);
+        System.out.println(b.getClass());
+        System.out.println(algo.getClass());
 
 
     }
@@ -10,7 +20,7 @@ public class Main {
     public static String buscaAmigo(){
         Scanner teclado = new Scanner(System.in);
         List<String> nombres = new ArrayList<>();
-        Random random = new Random();
+
         nombres.add("pepe");
         nombres.add("juan");
         nombres.add("carlos");
@@ -20,6 +30,9 @@ public class Main {
         nombres.add("camila");
         nombres.add("raúl");
         nombres.add("manolo");
+        nombres.add("bernarda");
+
+        Random random = new Random();
 
         int aleatorio = random.nextInt(nombres.size());
         String nombreAmigo = nombres.get(aleatorio);
