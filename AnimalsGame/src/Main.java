@@ -1,10 +1,9 @@
-import java.util.Collection;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     // <>
     public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
         Animals animal = new Animals();
         Random random = new Random();
         int aleatorio = random.nextInt(6);
@@ -20,6 +19,14 @@ public class Main {
         //String valueFrases = arrayFrases[aleatorio];
 
         System.out.println(objetoAnimales.get(keyAnimal) + "; " + keyAnimal);
+        System.out.println("Qué animal es?");
+        String respuesta = teclado.nextLine();
+
+        System.out.println(respuesta + " " + keyAnimal);
+        if (Objects.equals(respuesta, keyAnimal)) {
+            System.out.println("Respuesta correcta");
+        }
+
 
 
 
