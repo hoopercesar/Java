@@ -20,6 +20,9 @@ public class Animals {
         return mapaDeAnimales;
     }
 
+    String[] nombre = {"perro", "gato"};
+    Object 
+
 
 
 
