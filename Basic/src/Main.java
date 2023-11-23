@@ -19,7 +19,7 @@ public class Main {
         List<Estudiantes> listaEstudiantes = new ArrayList<>();
 
         int counter = 0;
-        while (counter < 3) {
+        while (counter < 5) {
             claseEstudiantes = new Estudiantes();
             System.out.println("Ingresa nombre");
             claseEstudiantes.setNombre(teclado.nextLine());
@@ -34,16 +34,16 @@ public class Main {
             counter++;
         }
         int notaMayor = 0;
+        String nombre = "";
         for (Estudiantes estudiante : listaEstudiantes) {
-            int nota = estudiante.getCalificacion();
-
-            if (nota > notaMayor) {
-                notaMayor = nota;
+            if (estudiante.getCalificacion() > notaMayor) {
+                notaMayor = estudiante.getCalificacion();
+                nombre = estudiante.getNombre();
             }
 
         }
 
-        return notaMayor;
+        return "Nombre:  " + nombre + ", nota: " + notaMayor;
 
     }
 }
