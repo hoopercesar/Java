@@ -2,48 +2,48 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
-
         Arreglos arreglos = new Arreglos();
         Object nombre = ingresaDatos();
         System.out.println(arreglos.sumaNumerosPares());
         System.out.println(nombre);
     }
 
+    // <>
+
     public static Object ingresaDatos() {
         // inicializa scanner
         Scanner teclado = new Scanner(System.in);
-        Estudiantes estudiantes = new Estudiantes();
+        Estudiantes claseEstudiantes = new Estudiantes();
+        //Class<? extends Estudiantes> claseEstudiante= claseEstudiantes.getClass();
 
-        List<Object> listaEstudiantes = new ArrayList<>();
+        List<Estudiantes> listaEstudiantes = new ArrayList<>();
 
         int counter = 0;
         while (counter < 3) {
+            claseEstudiantes = new Estudiantes();
             System.out.println("Ingresa nombre");
-            estudiantes.setNombre(teclado.nextLine());
+            claseEstudiantes.setNombre(teclado.nextLine());
 
             System.out.println("edad");
-            estudiantes.setEdad(Integer.parseInt(teclado.nextLine()));
+            claseEstudiantes.setEdad(Integer.parseInt(teclado.nextLine()));
 
             System.out.println("calificación");
-            estudiantes.setCalificacion(Integer.parseInt(teclado.nextLine()));
-            listaEstudiantes.add(estudiantes);
+            claseEstudiantes.setCalificacion(Integer.parseInt(teclado.nextLine()));
+            listaEstudiantes.add(claseEstudiantes);
 
             counter++;
         }
+        int notaMayor = 0;
+        for (Estudiantes estudiante : listaEstudiantes) {
+            int nota = estudiante.getCalificacion();
 
-        for (Object estudiante: listaEstudiantes) {
-            estudiante.getClass();
+            if (nota > notaMayor) {
+                notaMayor = nota;
+            }
+
         }
 
-
-        return listaEstudiantes.get(0);
-
-
-
-
-
-
+        return notaMayor;
 
     }
 }
