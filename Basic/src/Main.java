@@ -16,10 +16,13 @@ public class Main {
         Estudiantes claseEstudiantes = new Estudiantes();
         //Class<? extends Estudiantes> claseEstudiante= claseEstudiantes.getClass();
 
+        Inverse inverse = new Inverse();
+        inverse.algo();
+
         List<Estudiantes> listaEstudiantes = new ArrayList<>();
 
         int counter = 0;
-        while (counter < 5) {
+        while (counter < 2) {
             claseEstudiantes = new Estudiantes();
             System.out.println("Ingresa nombre");
             claseEstudiantes.setNombre(teclado.nextLine());
