@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -9,7 +10,8 @@ public class Inverse {
 
     public void algo() {
         System.out.println(listaEnteros);
-        System.out.println(List.reverse(listaEnteros));
+        Collections.reverse(listaEnteros);
+        System.out.println(listaEnteros);
     }
 
     //public List<Integer> ordena(){       return Collections.reverse(listaEnteros);   }
