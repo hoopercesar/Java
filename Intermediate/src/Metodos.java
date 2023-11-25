@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Metodos {
 
@@ -13,7 +10,7 @@ public class Metodos {
 
         int counter = 0;
         List resultado = null;
-        while (counter < 3) {
+        while (counter < 5) {
             producto = new Producto();
 
             System.out.println("nombre producto");
@@ -28,15 +25,16 @@ public class Metodos {
         }
         // <>
 
-        System.out.println(listaProductos.size());
-        List<Producto> listaOrdenada = new ArrayList<>();
+        // Devuelve el objeto producto ordenado por precio de menor a mayor.
+        Comparator<Producto> comparadorPorPrecio = Comparator.comparingDouble(Producto::getPrecio);
+        listaProductos.sort(comparadorPorPrecio);
 
-        int precioMayor = 0;
-        for (Producto elem: listaProductos){
-            if (elem.getPrecio()>precioMayor){
-                precioMayor=elem.getPrecio();
-            }
+        System.out.println("###################################");
+
+        for (Producto elem: listaProductos) {
+            System.out.println(elem.getPrecio());
         }
+
 
 
         return "resultado___";
