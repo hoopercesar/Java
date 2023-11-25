@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Metodos metodos = new Metodos();
+
+        System.out.println(metodos.ingresaProducto());
+
+
     }
 }
