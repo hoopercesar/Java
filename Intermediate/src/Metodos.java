@@ -13,7 +13,7 @@ public class Metodos {
 
         int counter = 0;
         List resultado = null;
-        while (counter < 4) {
+        while (counter < 3) {
             producto = new Producto();
 
             System.out.println("nombre producto");
@@ -24,19 +24,22 @@ public class Metodos {
 
             listaProductos.add(producto);
 
-
-
             counter++;
         }
+        // <>
 
-        resultado = (List) ordenaMayorAMenor(listaProductos);
+        System.out.println(listaProductos.size());
+        List<Producto> listaOrdenada = new ArrayList<>();
+
+        int precioMayor = 0;
+        for (Producto elem: listaProductos){
+            if (elem.getPrecio()>precioMayor){
+                precioMayor=elem.getPrecio();
+            }
+        }
 
 
-        return resultado;
+        return "resultado___";
     }
 
-    public static Object ordenaMayorAMenor(List algo) {
-        Collections.sort(algo);
-        return algo;
-    }
 }
