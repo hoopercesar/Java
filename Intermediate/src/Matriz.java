@@ -11,10 +11,13 @@ public class Matriz {
 
         for (int i=0; i<filas; i++) {
             for (int j=0; j<cols; j++) {
-                matriz = random.nextInt(100);
+                int aleatorio = random.nextInt();
+                matriz[i][j] = aleatorio;
 
             }
         }
+
+        return matriz;
     }
 
 
