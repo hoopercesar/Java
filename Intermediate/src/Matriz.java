@@ -11,7 +11,7 @@ public class Matriz {
 
         for (int i=0; i<filas; i++) {
             for (int j=0; j<cols; j++) {
-                int aleatorio = random.nextInt();
+                int aleatorio = random.nextInt(30);
                 matriz[i][j] = aleatorio;
 
             }
