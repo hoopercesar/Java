@@ -9,15 +9,32 @@ public class VerificadorRut {
 
     // <>
 
-    public static String creaDigito(){
+    public static Object creaDigito(){
         String[] numeros = ingresaRut().split("");
-        int[] multiplicadores = {2, 3, 4, 5, 6, 7, 2, 3};
+        int[] multiplicadores = {3, 2, 7, 6, 5, 4, 3, 2};
 
+        int k = 0;
+        int suma = 0;
         for(String numero: numeros){
-            System.out.println(Integer.parseInt(numero) - 1);
+            System.out.println(suma);
+            suma += Integer.parseInt(numero)*multiplicadores[k];
+            k++;
         }
 
-        return "a";
+        int parteEntera = suma/11 - suma % 11/10;
+        Object digito;
+
+        if (Math.abs(parteEntera-11) == 10) {
+            digito = "K";
+        } else if (Math.abs(parteEntera-11) == 0) {
+            digito = 11;
+        } else {
+            digito = Math.abs(parteEntera-11);
+        }
+
+        System.out.println();
+
+        return "El dígito es: " + digito;
     }
 
 
