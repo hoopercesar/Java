@@ -7,8 +7,15 @@ public class VerificadorRut {
 
     }
 
+    // <>
+
     public static String creaDigito(){
-        String numero = ingresaRut();
+        String[] numeros = ingresaRut().split("");
+        int[] multiplicadores = {2, 3, 4, 5, 6, 7, 2, 3};
+
+        for(String numero: numeros){
+            System.out.println(Integer.parseInt(numero) - 1);
+        }
 
         return "a";
     }
